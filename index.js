@@ -30,9 +30,13 @@ as the outer function cannot access the inner function. */
 For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you may use a for loop for this function if you wish */
 
 function summation(num) {
-return num;
+const numArray=[num];
+if (numArray.length<num) {
+  numArray.push(num-1);
 }
- console.log('task 2', summation(10));
+return numArray;
+}
+ console.log('task 2', summation(4));
 
 // 🦁🦁🦁 Topic 2: ADVANCED Array Methods 🦁🦁🦁
 // Given this zoo data from around the United States, follow the instructions below. Use the specific array methods in the requests below to solve the problems.
@@ -196,9 +200,20 @@ CuboidMaker.prototype.volume=function () {
 // 🦄🦄🦄 Topic 4: Classes 🦄🦄🦄 //
 //🦄🦄🦄 1. Take your prototypes from above and refactor into class syntax. Please rename your class CuboidMakerTwo and your object cuboidTwo 🦄🦄🦄
 class CuboidMakerTwo{
-
+  constructor(props) {
+    this.length=props.length;
+    this.width=props.width;
+    this.height=props.height;  
+  }
+  volume () {
+    return this.length*this.width*this.height;
+  }
+  surfaceArea () {
+    return 2* (this.length * this.width + this.length * this.height + this.width * this.height);
+  }
 }
 
+const cuboidTwo=new CuboidMakerTwo({length: 12, width: 65, height: 75});
 
 //🦄🦄🦄 Test your volume and surfaceArea methods by uncommenting the logs below: 🦄🦄🦄
 // console.log(cuboidTwo.volume()); // 100
