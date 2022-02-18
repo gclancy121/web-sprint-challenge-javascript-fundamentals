@@ -30,13 +30,17 @@ as the outer function cannot access the inner function. */
 For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you may use a for loop for this function if you wish */
 
 function summation(num) {
-const numArray=[num];
-if (numArray.length<num) {
-  numArray.push(num-1);
+const numArray=[];
+for (let ii=0; ii<=num; ii++) {
+  numArray.push(ii);
 }
-return numArray;
+let finalSum=0;
+for (let i = 0; i<numArray.length; i++) {
+  finalSum=finalSum+numArray[i];
 }
- console.log('task 2', summation(4));
+return finalSum;
+}
+ console.log('task 2', summation(9));
 
 // 🦁🦁🦁 Topic 2: ADVANCED Array Methods 🦁🦁🦁
 // Given this zoo data from around the United States, follow the instructions below. Use the specific array methods in the requests below to solve the problems.
