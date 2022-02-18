@@ -58,7 +58,7 @@ const zooAnimals = [
 
   function animalNames(dataset){
     let displayNames=[];
-    dataset.forEach(function(index) {
+    dataset.forEach(index => {
       displayNames.push(`name: ${index.animal_name}, scientific: ${index.scientific_name}`);
       
     });
@@ -66,7 +66,7 @@ const zooAnimals = [
   } 
    
 
-console.log('task 3', animalNames(zooAnimals));
+console.log('task 2.1', animalNames(zooAnimals));
 
   /* 🦁🦁🦁 Request 2: .map() 🦁🦁🦁
   The zoo needs a list of all their animal's names converted to lower case. 
