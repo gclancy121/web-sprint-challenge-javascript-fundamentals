@@ -17,7 +17,8 @@ myFunction();
 
 //🚀🚀🚀 ⬇️ 📝 Explanation ⬇️ 📝 🚀🚀🚀: 
 
-
+/* The nested function can access it because of a closure. By using a closure, it gives the nested function access to every part of the outer function. However, this does not go both ways, 
+as the outer function cannot access the inner function. */
 
 
 
