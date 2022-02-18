@@ -86,9 +86,12 @@ console.log('task 2.1', animalNames(zooAnimals));
   Using lowPopulationAnimals use .filter() to create a new array of objects which contains only the animals with a population of less than 5.
   */
 
-  function lowPopulationAnimals(/*Your Code Here*/){
-    /*Your Code Here*/
+  function lowPopulationAnimals(dataset){
+    const popFilter = dataset.filter(index => index.population<5);
+    return popFilter;
   }
+      
+console.log(lowPopulationAnimals(zooAnimals));
   
 
   /* 🦁🦁🦁 Request 4: .reduce() 🦁🦁🦁
@@ -97,10 +100,14 @@ console.log('task 2.1', animalNames(zooAnimals));
   Remember the reduce method takes two arguments: a callback (which itself takes two args - the accumulator and the item), and an initial value for the count.
   */
 
-  function USApop(/*Your Code Here*/){
-    /*Your Code Here*/
+  function USApop(dataset){
+   const reducedPop=dataset.reduce((previous, current) => {
+    return previous+current.population;
+   },0);
+   return reducedPop;
   }
   
+  console.log(USApop(zooAnimals));
   
   // 🦁🦁🦁 Callbacks 🦁🦁🦁  
   /* 🦁🦁🦁 Step 1: Create a higher-order function 🦁🦁🦁
